@@ -24,7 +24,7 @@ public class EmployeeRecord {
 	}
 
 	public void insert(Employee employee) throws ObjectNotValidException,
-			ObjectAlreadyInsertedException, ObjectNotValidException, RepositoryException {
+			ObjectAlreadyInsertedException, RepositoryException {
 			employeeRepository.insert(employee);
 	}
 

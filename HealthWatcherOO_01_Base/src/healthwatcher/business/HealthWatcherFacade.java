@@ -36,12 +36,8 @@ public class HealthWatcherFacade extends java.rmi.server.UnicastRemoteObject imp
 
 	private static boolean pmCreated = false;
 
-	public static void main(String[] args) {
-		try {
+	public static void main(String[] args) throws Exception {
 			new HealthWatcherFacade();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	private HealthWatcherFacade() throws PersistenceMechanismException, IOException {

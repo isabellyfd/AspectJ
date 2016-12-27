@@ -26,10 +26,6 @@ public class ComplaintRecord {
 
 	public int insert(Complaint complaint) throws ObjectNotValidException,
 	ObjectAlreadyInsertedException, ObjectNotValidException, RepositoryException {
-		
-		if (complaintRep.exists(complaint.getCodigo())) {
-			throw new ObjectAlreadyInsertedException("Complaint code already registered");
-		}
 		return complaintRep.insert(complaint);
 	}
 
@@ -42,5 +38,9 @@ public class ComplaintRecord {
 	public IteratorDsk getComplaintList() throws RepositoryException, ObjectNotFoundException {
 		return complaintRep.getComplaintList();
 
+	}
+	
+	public IComplaintRepository getComplaintRecord(){
+		return this.complaintRep;
 	}
 }
